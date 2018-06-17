@@ -1,4 +1,3 @@
-var cities;
 window.onload=function () {
 
     var xhttp = new XMLHttpRequest();
