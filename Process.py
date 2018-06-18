@@ -57,6 +57,9 @@ if cursor.count()==0:
         db_city_wise.insert_one(object)
 
     print("Processed.....")
+    db_checkLastUpdated = db['checkLastUpdated']
+    db_checkLastUpdated.update_one({"_id":1001},{"updated_on":response_date})
+
 
 else:
     print("Data Up to Date........")
